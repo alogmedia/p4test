@@ -25,19 +25,19 @@
     <div class="carousel-container">
         <div class="carousel-wrapper">
             <div class="carousel-slide">
-                <img src="img1.jpg" alt="Image 1">
+                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 1">
                 <p>Description for image 1</p>
             </div>
             <div class="carousel-slide">
-                <img src="img2.jpg" alt="Image 2">
+                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 2">
                 <p>Description for image 2</p>
             </div>
             <div class="carousel-slide">
-                <img src="img3.jpg" alt="Image 3">
+                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 3">
                 <p>Description for image 3</p>
             </div>
             <div class="carousel-slide">
-                <img src="img4.jpg" alt="Image 4">
+                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 4">
                 <p>Description for image 4</p>
             </div>
         </div>
@@ -68,7 +68,7 @@
     <div class="modal-overlay" id="cityModal">
     <div class="modal-content">
         <h3>Vælg by</h3>
-        <select>
+        <select class="info-form">
             <option value="kobenhavn">København</option>
             <option value="aarhus">Århus</option>
             <option value="odense">Odense</option>
@@ -78,8 +78,24 @@
         <p>sådan er du med</p>
         <button class="cta-button modal-cta-button">Videre</button>
     </div>
+    </div>
+    <!-- Second Modal Overlay for "Personlige oplysninger" -->
+    <div class="modal-overlay" id="infoModal">
+    <div class="modal-content">
+        <h3>Personlige oplysninger</h3>
+        <form class="info-form">
+            <input type="text" placeholder="First" required>
+            <input type="text" placeholder="Last" required>
+            <input type="email" placeholder="Email" required>
+            <input type="tel" placeholder="Phone" required>
+            <input type="text" placeholder="Address Line 1" required>
+            <input type="text" placeholder="City" required>
+            <input type="text" placeholder="Zip" required>
+        </form>
+        <button class="cta-button modal-cta-button">Submit</button>
+    </div>
+    </div>
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/overlay.js"></script>
-</div>
 </body>
 </html>
