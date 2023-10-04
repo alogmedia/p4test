@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="da">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,33 +22,32 @@
     <section class="how-to-join">
         <h2>Sådan er du med</h2>
         <!-- Carousel Section -->
-<div class="carousel-container">
-    <div class="carousel-wrapper">
-        <div class="carousel-slide">
-            <img src="img1.jpg" alt="Image 1">
-            <p>Description for image 1</p>
+    <div class="carousel-container">
+        <div class="carousel-wrapper">
+            <div class="carousel-slide">
+                <img src="img1.jpg" alt="Image 1">
+                <p>Description for image 1</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="img2.jpg" alt="Image 2">
+                <p>Description for image 2</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="img3.jpg" alt="Image 3">
+                <p>Description for image 3</p>
+            </div>
+            <div class="carousel-slide">
+                <img src="img4.jpg" alt="Image 4">
+                <p>Description for image 4</p>
+            </div>
         </div>
-        <div class="carousel-slide">
-            <img src="img2.jpg" alt="Image 2">
-            <p>Description for image 2</p>
-        </div>
-        <div class="carousel-slide">
-            <img src="img3.jpg" alt="Image 3">
-            <p>Description for image 3</p>
-        </div>
-        <div class="carousel-slide">
-            <img src="img4.jpg" alt="Image 4">
-            <p>Description for image 4</p>
+        <div class="carousel-controls">
+            <button onclick="moveSlide(-1)" class="prev">&#10094;</button>
+            <button onclick="moveSlide(1)" class="next">&#10095;</button>
         </div>
     </div>
-    <div class="carousel-controls">
-        <button onclick="moveSlide(-1)" class="prev">&#10094;</button>
-        <button onclick="moveSlide(1)" class="next">&#10095;</button>
-    </div>
-</div>
         <button class="cta-button">Lej Stand</button>
     </section>
-    <script src="carousel.js"></script>
     <!-- Other sections will go here based on the visual cues from the image -->
     <section class="win-win-section">
         <h2>WIN WIN</h2>
@@ -64,5 +63,23 @@
         <h2>KONTAKT</h2>
         <p>Here you can place the contact information, or perhaps a form for users to get in touch.</p>
     </section>
+
+    <!-- Modal Overlay -->
+    <div class="modal-overlay" id="cityModal">
+    <div class="modal-content">
+        <h3>Vælg by</h3>
+        <select>
+            <option value="kobenhavn">København</option>
+            <option value="aarhus">Århus</option>
+            <option value="odense">Odense</option>
+            <option value="aalborg">Aalborg</option>
+            <option value="svendborg">Svendborg</option>
+        </select>
+        <p>sådan er du med</p>
+        <button class="cta-button modal-cta-button">Videre</button>
+    </div>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/overlay.js"></script>
+</div>
 </body>
 </html>
