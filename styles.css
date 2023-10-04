@@ -1,0 +1,156 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color:#274e37;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #ffffff;
+    color: #274e37;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.logoimg {
+    height:60px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logoimg {
+        height:35px;
+    }
+}
+
+.burger-menu {
+    font-size: 24px;
+}
+
+@media only screen and (max-width: 600px) {
+    .burger-menu {
+        font-size: 18px;
+    }
+}
+
+.banner {
+    background-color: #f9f9f9;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.how-to-join {
+    padding: 40px;
+    text-align: center;
+}
+
+.grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.grid-item {
+    width: 200px;
+    text-align: center;
+    margin: 20px;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-button {
+    background-color: #f47521;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+    text-transform: uppercase;
+}
+
+.cta-button:hover {
+    background-color: #555;
+}
+
+/* Carousel Styles */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.carousel-wrapper {
+    display: flex;
+    transition: all 0.3s ease;
+}
+
+.carousel-slide {
+    min-width: 100%;
+    transition: all 0.3s ease;
+}
+
+.carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    transform: translateY(-50%);
+}
+
+.prev, .next {
+    background-color:#ffffff;
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color:#000000;
+    color:#FFFFFF;
+}
+
+.win-win-section {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.win-win-section .image-placeholder {
+    width: 80%;
+    max-width: 300px;
+    height: 200px;
+    margin: 0 auto;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* Find en stand nær dig Section Styles */
+.find-stand-section {
+    padding: 40px 0;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+/* KONTAKT Section Styles */
+.kontakt-section {
+    padding: 40px 0;
+    text-align: center;
+}
