@@ -1,7 +1,7 @@
 // Get both modal elements and the CTA button elements
-const cityModal = document.getElementById('cityModal');
-const infoModal = document.getElementById('infoModal');
-const ctaButtons = document.querySelectorAll('.cta-button');
+const cityModal = document.getElementById('cityModel');
+const infoModal = document.getElementById('infoModel');
+const ctaButtons = document.querySelectorAll('.cta-knap');
 
 // Open the cityModal when any "Lej Stand" button is clicked
 ctaButtons.forEach(btn => {
