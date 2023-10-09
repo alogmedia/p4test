@@ -45,7 +45,7 @@ header {
     text-align: center;
 }
 
-.how-to-join {
+.deltag {
     padding: 40px;
     text-align: center;
 }
@@ -219,4 +219,19 @@ header {
     border-radius: 5px;
     border: 1px solid #ccc;
     width: 80%;
+}
+.modal-overlay dialog.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.modal-overlay dialog.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001;  /* Higher z-index than the modal-overlay */
+    display: block;  /* Ensure it's displayed */
 }

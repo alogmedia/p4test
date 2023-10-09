@@ -8,11 +8,11 @@ ctaButtons.forEach(btn => {
     btn.addEventListener('click', function(event) {
         // Prevent event propagation to ensure the window click event doesn't interfere
         event.stopPropagation();
-        if (btn.textContent === "Videre") {
+        if (btn.getAttribute("data-action") === "switch-to-info-modal") {
             // Switch to the second modal when "Videre" is clicked
             cityModal.style.display = 'none';
             infoModal.style.display = 'flex';
-        } else if (btn.textContent === "Lej Stand" || btn.textContent === "Call To Action") {
+        } else if (btn.getAttribute("data-action") === "open-city-modal") {
             cityModal.style.display = 'flex';
         }
     });

@@ -1,72 +1,75 @@
 <!DOCTYPE html>
 <html lang="da">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Index Page</title>
-    <link rel="stylesheet" href="styles.css">
-    
-</head>
-<body>
-    <header>
-        <div class="logo" style="max-width: 100%;"><img class="logoimg" src="assets/images/logo.png"></div>
-        <div class="burger-menu">MENU &#9776;</div>
-    </header>
-
-    <section class="banner">
-        <h1>Headline</h1>
-        <p>Some description or catchy line goes here.</p>
-        <button class="cta-button">Lej Stand</button>
-    </section>
-
-    <section class="how-to-join">
-        <h2>Sådan er du med</h2>
-        <!-- Carousel Section -->
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <div class="carousel-slide">
-                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 1">
-                <p>Description for image 1</p>
-            </div>
-            <div class="carousel-slide">
-                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 2">
-                <p>Description for image 2</p>
-            </div>
-            <div class="carousel-slide">
-                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 3">
-                <p>Description for image 3</p>
-            </div>
-            <div class="carousel-slide">
-                <img class="slideimg" src="assets/images/imgslide.jpg" alt="Image 4">
-                <p>Description for image 4</p>
-            </div>
-        </div>
-        <div class="carousel-controls">
-            <button onclick="moveSlide(-1)" class="prev">&#10094;</button>
-            <button onclick="moveSlide(1)" class="next">&#10095;</button>
-        </div>
-    </div>
-        <button class="cta-button">Lej Stand</button>
-    </section>
-    <!-- Other sections will go here based on the visual cues from the image -->
-    <section class="win-win-section">
-        <h2>WIN WIN</h2>
-        <div class="image-placeholder">X</div>
-        <p>Some descriptive text about the WIN WIN initiative or offer. This can be a brief about what the users or customers can expect.</p>
-    </section>    
-    <section class="find-stand-section">
-        <h2>Find en stand nær dig</h2>
-        <p>Information or instructions on how users can find a stand near them. This can be a description or a call-to-action prompting users to take some action.</p>
-        <button class="cta-button">Lej stand</button>
-    </section>    
-    <section class="kontakt-section">
-        <h2>KONTAKT</h2>
-        <p>Here you can place the contact information, or perhaps a form for users to get in touch.</p>
-    </section>
-
-    <!-- Modal Overlay -->
-    <div class="modal-overlay" id="cityModal">
-    <div class="modal-content">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Loppemarkedernes Dag
+  </title>
+  <link href="styles.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header>
+   <figure class="logo" style="max-width: 100%;">
+    <img class="logoimg" src="assets/images/logo.png"/>
+   </figure>
+   <nav class="burger-menu">
+    MENU ☰
+   </nav>
+  </header>
+  <section class="banner">
+   <h1>
+    Headline
+   </h1>
+   <p>
+    Some description or catchy line goes here.
+   </p>
+   <button class="cta-button" data-action="open-city-modal">
+    Lej Stand
+   </button>
+  </section>
+  <section class="deltag">
+   <h2>
+    Sådan er du med
+   </h2>
+   <!-- Carousel Sektion -->
+   <section class="ideer">
+   </section>
+   <button class="cta-button" data-action="open-city-modal">
+    Lej Stand
+   </button>
+  </section>
+  <!-- Other sections will go here based on the visual cues from the image -->
+  <section class="win-win-section">
+   <h2>
+    WIN WIN
+   </h2>
+   <div class="image-placeholder">
+    X
+   </div>
+   <p>
+    Some descriptive text about the WIN WIN initiative or offer. This can be a brief about what the users or customers can expect.
+   </p>
+  </section>
+  <section class="find-stand-section">
+   <h2>
+    Find en stand nær dig
+   </h2>
+   <button class="cta-button" data-action="open-city-modal">
+    Lej stand
+   </button>
+  </section>
+  <section class="kontakt-section">
+   <h2>
+    KONTAKT
+   </h2>
+   <p>
+    Here you can place the contact information, or perhaps a form for users to get in touch.
+   </p>
+  </section>
+  <!-- Modal Overlay -->
+  <dialog class="modal-overlay" id="cityModal">
+        <dialog class="modal-content">
         <h3>Vælg by</h3>
         <select class="info-form">
             <option value="kobenhavn">København</option>
@@ -76,26 +79,28 @@
             <option value="svendborg">Svendborg</option>
         </select>
         <p>sådan er du med</p>
-        <button class="cta-button modal-cta-button">Videre</button>
-    </div>
-    </div>
-    <!-- Second Modal Overlay for "Personlige oplysninger" -->
-    <div class="modal-overlay" id="infoModal">
-    <div class="modal-content">
+        <button class="cta-button modal-cta-button" data-action="switch-to-info-modal">Videre</button>
+    </dialog>
+</dialog>
+  <!-- Second Modal Overlay for "Personlige oplysninger" -->
+  <dialog class="modal-overlay" id="infoModal">
+    <dialog class="modal-content">
         <h3>Personlige oplysninger</h3>
         <form class="info-form">
-            <input type="text" placeholder="First" required>
-            <input type="text" placeholder="Last" required>
+            <input type="text" placeholder="Navn" required>
+            <input type="text" placeholder="Efternavn" required>
             <input type="email" placeholder="Email" required>
-            <input type="tel" placeholder="Phone" required>
-            <input type="text" placeholder="Address Line 1" required>
-            <input type="text" placeholder="City" required>
-            <input type="text" placeholder="Zip" required>
+            <input type="tel" placeholder="Mobil" required>
+            <input type="text" placeholder="Addresse" required>
+            <input type="text" placeholder="By" required>
+            <input type="text" placeholder="Postnummer" required>
         </form>
         <button class="cta-button modal-cta-button">Submit</button>
-    </div>
-    </div>
-    <script src="assets/js/carousel.js"></script>
-    <script src="assets/js/overlay.js"></script>
-</body>
+    </dialog>
+  </dialog>
+  <script src="assets/js/carousel.js">
+  </script>
+  <script src="assets/js/overlay.js">
+  </script>
+ </body>
 </html>
