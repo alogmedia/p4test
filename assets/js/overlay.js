@@ -1,27 +1,27 @@
 // Get both modal elements and the CTA button elements
-const cityModal = document.getElementById('cityModel');
-const infoModal = document.getElementById('infoModel');
-const ctaButtons = document.querySelectorAll('.cta-knap');
+const cityModel = document.getElementById('byModel');
+const infoModel = document.getElementById('infoModel');
+const ctaKnapper = document.querySelectorAll('.cta-knap');
 
-// Open the cityModal when any "Lej Stand" button is clicked
-ctaButtons.forEach(btn => {
+// Open the byModel when any "Lej Stand" button is clicked
+ctaKnapper.forEach(btn => {
     btn.addEventListener('click', function(event) {
         // Prevent event propagation to ensure the window click event doesn't interfere
         event.stopPropagation();
-        if (btn.getAttribute("data-action") === "switch-to-info-modal") {
+        if (btn.getAttribute("data-action") === "skift-til-infoModel") {
             // Switch to the second modal when "Videre" is clicked
-            cityModal.style.display = 'none';
-            infoModal.style.display = 'flex';
-        } else if (btn.getAttribute("data-action") === "open-city-modal") {
-            cityModal.style.display = 'flex';
+            byModel.style.display = 'none';
+            infoModel.style.display = 'flex';
+        } else if (btn.getAttribute("data-action") === "OpenByModel") {
+            byModel.style.display = 'flex';
         }
     });
 });
 
 // Close the modals when clicking outside the modal content
 window.addEventListener('click', function(event) {
-    if (event.target === cityModal || event.target === infoModal) {
-        cityModal.style.display = 'none';
-        infoModal.style.display = 'none';
+    if (event.target === byModel || event.target === infoModel) {
+        byModel.style.display = 'none';
+        infoModel.style.display = 'none';
     }
 });

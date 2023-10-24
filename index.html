@@ -16,7 +16,7 @@
 </figure>
 <nav class="burger-menu">
 
-<label class="menu-icon" for="menu-toggle">MENU ☰</label>
+<label class="menu-icon" for="menu-toggle">MENU ☰</label> <!-- Burger menu laves til javascript-->
 <ul class="menu-items">
 <li><a href="#">Oplev naturen</a></li>
 <li><a href="#">Om Naturfonden</a></li>
@@ -36,24 +36,56 @@
 </nav>
 </header>
 <section class="banner">
-<h1>
+    <figure class="banneroverlay">
+<h1 class="banneroverskrift">
     Headline
    </h1>
-<p>
-    Some description or catchy line goes here.
+<p class="bannertekst">
+    Some description or catchy l
+    ine goes here.
    </p>
-<button class="cta-knap" data-action="open-city-modal">
+<button class="cta-knap" data-action="OpenByModel">
     Lej Stand
-   </button>
+   </button></figure>
 </section>
 <section class="deltag">
 <h2>
     Sådan er du med
-   </h2>
+</h2>
+<section class="win-win-container">
+    <figure class="win-win-section">
+        <img class="infobillede" src="assets/images/1.png">
+        <h4>Lej en stand</h4>
+        <p class="winwintekst">
+            Udfyld tilmeldings formularen og vælg tid/sted.
+        </p>
+    </figure>
+    <figure class="win-win-section">
+        <img class="infobillede" src="assets/images/2.png">
+        <h4>Sæt pris på dine vare</h4>
+        <p class="winwintekst">
+            Du vælger selvølfelig selv prisen på dine vare.
+        </p>
+    </figure>
+    <figure class="win-win-section">
+        <img class="infobillede" src="assets/images/3.png">
+        <h4>Stil vare op på din stand</h4>
+        <p class="winwintekst">
+            Du vælger selv hvordan dine vare skal stå på din stand!
+        </p>
+    </figure>
+    <figure class="win-win-section">
+        <img class="winwintekst" class="infobillede" src="assets/images/5.png">
+        <h4>Make it rain!</h4>
+        <p class="winwintekst">
+            Alt du sælger ryger direkte ned i din lomme!
+        </p>
+    </figure>
+</section>
 <!-- Carousel Sektion -->
 <section class="ideer">
 </section>
-<button class="cta-knap" data-action="open-city-modal">
+<button class="cta-knap" data-action="OpenByModel">
     Lej Stand
    </button>
 </section>
@@ -73,7 +105,7 @@
 <h2>
     Find en stand nær dig
    </h2>
-<button class="cta-knap" data-action="open-city-modal">
+<button class="cta-knap" data-action="OpenByModel">
     Lej stand
    </button>
 </section>
@@ -86,24 +118,24 @@
    </p>
 </section>
 <!-- Modal Overlay -->
-<dialog class="modeloverlay" id="cityModel">
+<dialog class="modeloverlay" id="byModel">
 <dialog class="modelindhold">
-<h3>Vælg by</h3>
+<h3 class="overlayoverskrift">Vælg by</h3>
 <select class="info-form">
-<option value="kobenhavn">København</option>
-<option value="aarhus">Århus</option>
-<option value="odense">Odense</option>
-<option value="aalborg">Aalborg</option>
-<option value="svendborg">Svendborg</option>
+    <option value="kobenhavn">København</option> <!-- Laves om til javascript af simon -->
+    <option value="aarhus">Århus</option>
+    <option value="odense">Odense</option>
+    <option value="aalborg">Aalborg</option>
+    <option value="svendborg">Svendborg</option>
 </select>
 <p>sådan er du med</p>
-<button class="cta-knap model-cta-knap" data-action="switch-to-info-modal">Videre</button>
+<button class="cta-knap model-cta-knap" data-action="skift-til-infoModel">Videre</button>
 </dialog>
 </dialog>
 <!-- Second Modal Overlay for "Personlige oplysninger" -->
 <dialog class="modeloverlay" id="infoModel">
 <dialog class="modelindhold">
-<h3>Personlige oplysninger</h3>
+<h3 class="overlayoverskrift">Personlige oplysninger</h3>
 <form class="info-form">
 <input placeholder="Navn" required="" type="text"/>
 <input placeholder="Efternavn" required="" type="text"/>

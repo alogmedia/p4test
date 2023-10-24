@@ -1,8 +1,13 @@
+@font-face {
+    font-family: SundayBest;
+    src: url(assets/font/SundayBest.ttf);
+  }
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color:#274e37;
+    color:#00985F;
 }
 
 header {
@@ -10,8 +15,30 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #ffffff;
-    color: #274e37;
+    background-color: #F5F1E8;
+    color: #00985F;
+}
+
+.banner {
+    background-image:url(assets/images/banner.png);
+}
+
+.banneroverskrift {
+    color: #00985F;
+    padding-top: 15px;
+}
+
+.bannertekst {
+    color: #00985F;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.banneroverlay {
+    background-color: #F5F1E8;
+    height:200px;
+    border: solid 5px;
+    border-color: #B3724A;
 }
 
 .logo {
@@ -21,12 +48,6 @@ header {
 
 .logoimg {
     height:55px;
-}
-
-@media only screen and (max-width: 600px) {
-    .logoimg {
-        height:20px;
-    }
 }
 
 .burger-menu {
@@ -39,13 +60,13 @@ header {
     display: block;
     width: auto;
     text-align: left;
-    background-color: #ffffff;
+    background-color: #F5F1E8;
 }
 
 .menu-items {
     display: none; visibility: hidden;
     position: absolute;
-    background-color: #ffffff;
+    background-color: #F5F1E8;
     border: 1px solid #ccc;
     list-style-type: none;
     padding: 0;
@@ -71,7 +92,7 @@ header {
 }
 
 .menu-items li:hover {
-    color:#f47521;
+    color:#B3724A;
 }
 
 .menu-items.active {
@@ -79,23 +100,7 @@ header {
     visibility: visible;
 }
 
-@media only screen and (max-width: 900px) {
-    .burger-menu {
-        display:block;
-        font-size: 18px;
-        margin-right:10%;
-    }
-    .menu {
-        display:none;
-    }
-    .menu-items {
-        width:140%;
 
-    }
-    .menu-items li {
-        font-size: 14px; /* Adjusting the font size */
-    }
-}
 
 .menu {
     font-size: 18px;
@@ -114,15 +119,15 @@ header {
 }
 
 .stoet {
-    color: #f47521 !important;
+    color: #B3724A !important;
     border-radius: 5px !important;
-    border: 1px solid #f47521;
+    border: 1px solid #B3724A;
 }
 
 .stoetburger {
-    color: #f47521 !important;
+    color: #B3724A !important;
     border-radius: 5px !important;
-    border: 1px solid #f47521;
+    border: 1px solid #B3724A;
     padding:2px 20px 2px 20px;
 }
 
@@ -169,7 +174,7 @@ header {
 
 
 .cta-knap {
-    background-color: #f47521;
+    background-color: #B3724A;
     color: #fff;
     padding: 10px 20px;
     border: none;
@@ -184,22 +189,27 @@ header {
     background-color: #555;
 }
 
+.win-win-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 .win-win-section {
     padding: 40px 0;
     text-align: center;
 }
 
 .win-win-section .infobillede {
-    width: 80%;
-    max-width: 300px;
-    height: 200px;
+    padding: 0;
     margin: 0 auto;
-    background-color: #e0e0e0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: baseline;
     font-size: 24px;
     font-weight: bold;
+    margin-bottom: 30px;
 }
 
 /* Find en stand nær dig Section Styles */
@@ -227,6 +237,11 @@ header {
     z-index: 1000;
     align-items: center;
     justify-content: center;
+}
+
+.overlayoverskrift {
+    font-family: SundayBest;
+    color: #00985F;
 }
 
 .modelindhold {
@@ -280,4 +295,29 @@ header {
     transform: translate(-50%, -50%);
     z-index: 1001;  /* Higher z-index than the modal-overlay */
     display: block;  /* Ensure it's displayed */
+}
+
+@media only screen and (max-width: 900px) {
+    .burger-menu {
+        display:block;
+        font-size: 18px;
+        margin-right:10%;
+    }
+    .menu {
+        display:none;
+    }
+    .menu-items {
+        width:140%;
+
+    }
+    .menu-items li {
+        font-size: 14px; /* Adjusting the font size */
+    }
+    .logoimg {
+        height:20px;
+    }
+    .win-win-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
